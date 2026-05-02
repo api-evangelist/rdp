@@ -1,17 +1,43 @@
 aid: rdp
 name: RDP
-description: RDP is a technology or concept used in computing and information technology
-  to address specific technical challenges. It provides capabilities that help practitioners
-  build, manage, or improve systems and processes in their domain.
+description: >-
+  The Remote Desktop Protocol (RDP) is a proprietary network protocol developed
+  by Microsoft that provides a graphical interface to connect to another
+  computer over a network. RDP transmits keyboard, mouse, display, and audio
+  data between client and host, enabling remote administration, virtual
+  desktops, and remote work scenarios. The protocol typically operates on TCP
+  and UDP port 3389 and is implemented by Microsoft's Remote Desktop Services
+  as well as third-party clients across Windows, macOS, Linux, iOS, and
+  Android. This index also acknowledges the use of the RDP acronym for
+  Refinitiv (LSEG) Data Platform in the financial data context.
 type: Index
+position: Consuming
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/apis.yml
 tags:
-- RDP
+  - Microsoft
+  - Networking
+  - RDP
+  - Remote Access
+  - Remote Desktop
 created: '2025-01-01'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 apis: []
-common: []
+common:
+  - type: JSONSchema
+    name: RDP Connection Schema
+    description: JSON Schema describing an RDP connection profile.
+    url: https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/json-schema/rdp-connection.json
+  - type: Specification
+    name: MS-RDPBCGR Remote Desktop Protocol Basic Connectivity and Graphics Remoting
+    description: Microsoft Open Specification defining the core RDP protocol.
+    url: https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpbcgr/
+  - type: Documentation
+    name: Microsoft Remote Desktop Services Documentation
+    description: Official documentation for Microsoft Remote Desktop Services.
+    url: https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/welcome-to-rds
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

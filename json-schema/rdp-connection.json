@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/json-schema/rdp-connection.json",
+  "title": "RDP Connection",
+  "description": "Schema describing an RDP (Remote Desktop Protocol) connection profile, modeled after common RDP file (.rdp) configuration parameters.",
+  "type": "object",
+  "required": ["host"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Friendly name for this connection profile."
+    },
+    "host": {
+      "type": "string",
+      "description": "Hostname or IP address of the RDP server to connect to."
+    },
+    "port": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535,
+      "default": 3389,
+      "description": "Network port for the RDP service. Defaults to 3389."
+    },
+    "username": {
+      "type": "string",
+      "description": "Username used to authenticate with the RDP host."
+    },
+    "domain": {
+      "type": "string",
+      "description": "Active Directory domain (or workgroup) for the user account."
+    },
+    "screenWidth": {
+      "type": "integer",
+      "minimum": 200,
+      "description": "Desktop width in pixels for the remote session."
+    },
+    "screenHeight": {
+      "type": "integer",
+      "minimum": 200,
+      "description": "Desktop height in pixels for the remote session."
+    },
+    "colorDepth": {
+      "type": "integer",
+      "enum": [8, 15, 16, 24, 32],
+      "description": "Session color depth in bits per pixel."
+    },
+    "fullScreen": {
+      "type": "boolean",
+      "description": "Whether to launch the session in full screen mode."
+    },
+    "audioMode": {
+      "type": "string",
+      "enum": ["local", "remote", "none"],
+      "description": "Where to play remote audio: on the local client, on the remote host, or disabled."
+    },
+    "redirectClipboard": {
+      "type": "boolean",
+      "description": "Whether to share the local clipboard with the remote session."
+    },
+    "redirectPrinters": {
+      "type": "boolean",
+      "description": "Whether to redirect local printers to the remote session."
+    },
+    "redirectDrives": {
+      "type": "boolean",
+      "description": "Whether to redirect local drives to the remote session."
+    },
+    "redirectSmartcards": {
+      "type": "boolean",
+      "description": "Whether to redirect local smart card devices to the remote session."
+    },
+    "useGateway": {
+      "type": "boolean",
+      "description": "Whether to connect through an RD Gateway server."
+    },
+    "gatewayHostname": {
+      "type": "string",
+      "description": "Hostname of the RD Gateway when useGateway is true."
+    },
+    "networkLevelAuthentication": {
+      "type": "boolean",
+      "description": "Whether to require Network Level Authentication (NLA) before the session is established."
+    }
+  },
+  "additionalProperties": true
+}
