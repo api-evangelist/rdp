@@ -1,0 +1,14 @@
+{
+  "@context": "https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/json-ld/rdp-context.jsonld",
+  "@type": "RDPSession",
+  "sessionId": 3,
+  "username": "jdoe",
+  "domain": "CORP",
+  "state": "Active",
+  "clientName": "LAPTOP-JDOE",
+  "clientAddress": "10.0.1.45",
+  "clientProtocol": "RDP 10.9",
+  "logonTime": "2026-05-02T08:32:00Z",
+  "hostName": "RDSH-01.corp.example.com",
+  "encryptionLevel": "High"
+}

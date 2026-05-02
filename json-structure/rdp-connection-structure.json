@@ -1,0 +1,103 @@
+{
+  "name": "RDP Connection",
+  "description": "Structure documentation for an RDP connection profile, representing the configuration parameters used to establish a Remote Desktop Protocol session.",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "description": "Friendly name for this connection profile."
+    },
+    {
+      "name": "host",
+      "type": "string",
+      "required": true,
+      "description": "Hostname or IP address of the RDP server to connect to."
+    },
+    {
+      "name": "port",
+      "type": "integer",
+      "required": false,
+      "default": 3389,
+      "description": "Network port for the RDP service. Standard port is 3389."
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "required": false,
+      "description": "Username used to authenticate with the RDP host."
+    },
+    {
+      "name": "domain",
+      "type": "string",
+      "required": false,
+      "description": "Active Directory domain or workgroup for the user account."
+    },
+    {
+      "name": "screenWidth",
+      "type": "integer",
+      "required": false,
+      "description": "Desktop width in pixels for the remote session (minimum 200)."
+    },
+    {
+      "name": "screenHeight",
+      "type": "integer",
+      "required": false,
+      "description": "Desktop height in pixels for the remote session (minimum 200)."
+    },
+    {
+      "name": "colorDepth",
+      "type": "integer (enum: 8, 15, 16, 24, 32)",
+      "required": false,
+      "description": "Session color depth in bits per pixel."
+    },
+    {
+      "name": "fullScreen",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to launch the session in full screen mode."
+    },
+    {
+      "name": "audioMode",
+      "type": "string (enum: local, remote, none)",
+      "required": false,
+      "description": "Where to play remote audio: on the local client, on the remote host, or disabled."
+    },
+    {
+      "name": "redirectClipboard",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to share the local clipboard with the remote session."
+    },
+    {
+      "name": "redirectPrinters",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to redirect local printers to the remote session."
+    },
+    {
+      "name": "redirectDrives",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to redirect local drives to the remote session."
+    },
+    {
+      "name": "useGateway",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to connect through an RD Gateway server."
+    },
+    {
+      "name": "gatewayHostname",
+      "type": "string",
+      "required": false,
+      "description": "Hostname of the RD Gateway when useGateway is true."
+    },
+    {
+      "name": "networkLevelAuthentication",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to require Network Level Authentication (NLA) before the session is established."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+aid: rdp
+name: RDP Vocabulary
+description: >-
+  Domain vocabulary for the Remote Desktop Protocol (RDP), a proprietary network
+  protocol developed by Microsoft for remote graphical access to computers. Also
+  covers the Refinitiv Data Platform (RDP) — the LSEG financial data delivery API
+  platform sharing the same acronym. Includes protocol components, session types,
+  security features, and related services.
+created: '2026-05-02'
+modified: '2026-05-02'
+
+terms:
+
+  - term: RDP
+    label: Remote Desktop Protocol
+    definition: >-
+      A proprietary Microsoft network protocol that provides a graphical interface
+      to connect to another computer over a network. RDP transmits display, keyboard,
+      mouse, and audio data between client and host. It typically operates on TCP/UDP
+      port 3389 and is defined in the MS-RDPBCGR open specification.
+    tags:
+      - Protocol
+      - Microsoft
+      - Remote Access
+
+  - term: RDPSession
+    label: RDP Session
+    definition: >-
+      An active or disconnected remote desktop session on an RDS host. Each session
+      has a unique session ID, state, and associated user. Multiple sessions can
+      exist simultaneously on a single host.
+    tags:
+      - Remote Desktop Services
+      - Session Management
+
+  - term: RDSHost
+    label: Remote Desktop Session Host
+    definition: >-
+      A Windows Server role (RDSH) that allows multiple users to connect
+      simultaneously to run programs or access desktops. Formerly known as
+      Terminal Server.
+    tags:
+      - Remote Desktop Services
+      - Server Role
+
+  - term: RDGateway
+    label: RD Gateway
+    definition: >-
+      A role service that enables authorized users to connect to resources on an
+      internal network from the internet using HTTPS. RD Gateway acts as a proxy
+      between remote RDP clients and internal RDS servers.
+    tags:
+      - Remote Desktop Services
+      - Security
+      - Network
+
+  - term: NLA
+    label: Network Level Authentication
+    definition: >-
+      An authentication method for RDP that requires the connecting user to
+      authenticate before a full remote session is established. NLA reduces the
+      attack surface by rejecting unauthenticated connection attempts earlier
+      in the handshake.
+    tags:
+      - Security
+      - Authentication
+
+  - term: VirtualChannel
+    label: Virtual Channel
+    definition: >-
+      A multiplexed data channel within an RDP session that carries specific
+      types of data (clipboard, audio, device redirection, etc.) independently
+      from the primary display and input streams.
+    tags:
+      - Protocol Architecture
+      - RDP
+
+  - term: DeviceRedirection
+    label: Device Redirection
+    definition: >-
+      An RDP feature that makes local client devices (printers, drives, smart
+      cards, audio devices, USB) available within the remote session as if they
+      were connected to the remote host.
+    tags:
+      - RDP Features
+      - Remote Desktop Services
+
+  - term: RDPFile
+    label: RDP File
+    definition: >-
+      A plain-text configuration file with the .rdp extension containing all
+      connection parameters for an RDP session. RDP files can be opened directly
+      by the Microsoft Remote Desktop client on Windows, macOS, iOS, and Android.
+    tags:
+      - Configuration
+      - Client
+
+  - term: RemoteApp
+    label: RemoteApp
+    definition: >-
+      A Remote Desktop Services feature that publishes individual applications
+      as if they were running locally on the user's machine, without exposing
+      the full remote desktop.
+    tags:
+      - Remote Desktop Services
+      - Application Delivery
+
+  - term: RefinitivDataPlatform
+    label: Refinitiv Data Platform (RDP)
+    definition: >-
+      A cloud-based financial data delivery platform from LSEG (formerly Refinitiv)
+      that provides REST APIs for real-time and historical market data, news,
+      reference data, ESG scores, and analytics. Authentication uses OAuth 2.0
+      with short-lived access tokens. The Refinitiv Data Platform APIs are now
+      published as LSEG Data Platform APIs.
+    tags:
+      - Financial Data
+      - LSEG
+      - REST API
+
+  - term: SessionState
+    label: Session State
+    definition: >-
+      The current status of an RDP session. Valid states include Active
+      (connected and interactive), Connected (connected but no user logged in),
+      Disconnected (user logged on but session is disconnected), Idle, and others
+      defined by the WTS_CONNECTSTATE_CLASS enumeration.
+    tags:
+      - Session Management
+      - Remote Desktop Services
+
+  - term: EncryptionLevel
+    label: RDP Encryption Level
+    definition: >-
+      The encryption strength negotiated for an RDP session. Levels range from
+      None to FIPS (Federal Information Processing Standards). Modern deployments
+      should use TLS 1.2+ with High or FIPS encryption.
+    tags:
+      - Security
+      - Protocol

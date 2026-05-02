@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/json-schema/rdp-session-schema.json",
+  "title": "RDP Session",
+  "description": "Schema describing an active or historical RDP (Remote Desktop Protocol) session on a Remote Desktop Services host, including session state and client information.",
+  "type": "object",
+  "required": ["sessionId", "state"],
+  "properties": {
+    "sessionId": {
+      "type": "integer",
+      "description": "Unique integer identifier for the session on the RDS host."
+    },
+    "username": {
+      "type": "string",
+      "description": "The user account name logged into this session."
+    },
+    "domain": {
+      "type": "string",
+      "description": "The Active Directory domain of the logged-in user."
+    },
+    "state": {
+      "type": "string",
+      "enum": ["Active", "Connected", "ConnectQuery", "Shadow", "Disconnected", "Idle", "Listen", "Reset", "Down", "Init"],
+      "description": "Current state of the RDP session as reported by Remote Desktop Services."
+    },
+    "clientName": {
+      "type": "string",
+      "description": "Computer name of the RDP client device."
+    },
+    "clientAddress": {
+      "type": "string",
+      "description": "IP address of the connecting RDP client."
+    },
+    "clientProtocol": {
+      "type": "string",
+      "description": "Protocol version reported by the RDP client."
+    },
+    "logonTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the user logged onto the session."
+    },
+    "disconnectTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the session was disconnected, if applicable."
+    },
+    "hostName": {
+      "type": "string",
+      "description": "Name of the Remote Desktop Session Host (RDSH) server."
+    },
+    "encryptionLevel": {
+      "type": "string",
+      "enum": ["None", "Low", "ClientCompatible", "High", "FIPS"],
+      "description": "Encryption level negotiated for this RDP session."
+    }
+  }
+}

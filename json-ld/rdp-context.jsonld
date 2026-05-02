@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "rdp": "https://schema.api-evangelist.com/rdp/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "RDPConnection": {
+      "@id": "rdp:Connection",
+      "@type": "@id"
+    },
+    "RDPSession": {
+      "@id": "rdp:Session",
+      "@type": "@id"
+    },
+    "RDSHost": {
+      "@id": "rdp:RemoteDesktopSessionHost",
+      "@type": "@id"
+    },
+
+    "name": "schema:name",
+    "host": {
+      "@id": "rdp:host",
+      "@type": "xsd:string"
+    },
+    "port": {
+      "@id": "rdp:port",
+      "@type": "xsd:integer"
+    },
+    "username": "rdp:username",
+    "domain": "rdp:domain",
+    "screenWidth": {
+      "@id": "rdp:screenWidth",
+      "@type": "xsd:integer"
+    },
+    "screenHeight": {
+      "@id": "rdp:screenHeight",
+      "@type": "xsd:integer"
+    },
+    "colorDepth": {
+      "@id": "rdp:colorDepth",
+      "@type": "xsd:integer"
+    },
+    "fullScreen": {
+      "@id": "rdp:fullScreen",
+      "@type": "xsd:boolean"
+    },
+    "audioMode": "rdp:audioMode",
+    "redirectClipboard": {
+      "@id": "rdp:redirectClipboard",
+      "@type": "xsd:boolean"
+    },
+    "redirectPrinters": {
+      "@id": "rdp:redirectPrinters",
+      "@type": "xsd:boolean"
+    },
+    "redirectDrives": {
+      "@id": "rdp:redirectDrives",
+      "@type": "xsd:boolean"
+    },
+    "useGateway": {
+      "@id": "rdp:useGateway",
+      "@type": "xsd:boolean"
+    },
+    "gatewayHostname": "rdp:gatewayHostname",
+    "networkLevelAuthentication": {
+      "@id": "rdp:networkLevelAuthentication",
+      "@type": "xsd:boolean"
+    },
+    "sessionId": {
+      "@id": "rdp:sessionId",
+      "@type": "xsd:integer"
+    },
+    "state": "rdp:sessionState",
+    "clientName": "rdp:clientName",
+    "clientAddress": {
+      "@id": "rdp:clientAddress",
+      "@type": "xsd:string"
+    },
+    "logonTime": {
+      "@id": "rdp:logonTime",
+      "@type": "xsd:dateTime"
+    },
+    "disconnectTime": {
+      "@id": "rdp:disconnectTime",
+      "@type": "xsd:dateTime"
+    },
+    "hostName": "rdp:hostName",
+    "encryptionLevel": "rdp:encryptionLevel"
+  }
+}
