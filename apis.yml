@@ -46,11 +46,11 @@ common:
     name: RDP JSON-LD Context
     description: JSON-LD context mapping RDP concepts to linked data identifiers.
     url: https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/json-ld/rdp-context.jsonld
-  - type: Example
+  - type: Examples
     name: RDP Connection Example
     description: Example RDP connection profile for a corporate development server.
     url: https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/examples/rdp-connection-example.json
-  - type: Example
+  - type: Examples
     name: RDP Session Example
     description: Example active RDP session record from a Remote Desktop Services host.
     url: https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/examples/rdp-session-example.json
