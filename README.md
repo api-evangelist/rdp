@@ -1,4 +1,4 @@
-# RDP (rdp)
+# RDP
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,67 +64,76 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The Remote Desktop Protocol (RDP) is a proprietary network protocol developed by Microsoft that provides a graphical interface to connect to another computer over a network. RDP transmits keyboard, mouse, display, and audio data between client and host, enabling remote administration, virtual desktops, and remote work scenarios. The protocol typically operates on TCP and UDP port 3389 and is defined in the MS-RDPBCGR open specification.
+The Remote Desktop Protocol (RDP) is a proprietary network protocol developed by Microsoft that provides a graphical interface to connect to another computer over a network. RDP transmits keyboard, mouse, display, and audio data between client and host, enabling remote administration, virtual desktops, and remote work scenarios. The protocol typically operates on TCP and UDP port 3389 and is defined in the MS-RDPBCGR open specification. It is implemented by Microsoft's Remote Desktop Services as well as third-party clients across Windows, macOS, Linux, iOS, and Android. The RDP acronym is also shared with the Refinitiv Data Platform (LSEG), a cloud REST API platform for financial market data, historical pricing, ESG, and analytics.
 
-This index also covers the Refinitiv Data Platform (RDP) from LSEG — a cloud REST API platform for financial market data, historical pricing, ESG scores, and analytics.
+**Areas:** Financial Data · LSEG · Microsoft · Networking · RDP · Remote Access · Remote Desktop · Refinitiv
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/rdp/refs/heads/main/apis.yml)
+## RDP on APIs.io
 
-## Scope
+Everything profiled for RDP is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/rdp/](https://apis.io/providers/rdp/)** — or go straight to one of the APIs or properties below.
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Financial Data, LSEG, Microsoft, Networking, RDP, Remote Access, Remote Desktop, Refinitiv
+#### JSON Schema (2)
 
-## JSON Schemas
+The data models the API reads and writes.
 
-| Schema | Description |
-|--------|-------------|
-| [RDP Connection Schema](json-schema/rdp-connection.json) | Schema for an RDP connection profile (.rdp file equivalent) |
-| [RDP Session Schema](json-schema/rdp-session-schema.json) | Schema for an active or historical RDP session on an RDS host |
+- [RDP Connection](https://apis.io/schemas/rdp/rdp-connection/)
+- [RDP Session](https://apis.io/schemas/rdp/rdp-session/)
 
-## JSON Structures
+#### JSON Structure (1)
 
-| Structure | Description |
-|-----------|-------------|
-| [RDP Connection Structure](json-structure/rdp-connection-structure.json) | Field-level documentation for the connection profile object |
+Data models expressed in JSON Structure.
 
-## JSON-LD Context
+- [Rdp Connection Structure](https://apis.io/json-structure/rdp/rdp-connection-structure/)
 
-| Context | Description |
-|---------|-------------|
-| [RDP Context](json-ld/rdp-context.jsonld) | JSON-LD context mapping RDP concepts to linked data identifiers |
+#### JSON-LD (1)
 
-## Examples
+Linked-data contexts for the provider's vocabulary.
 
-| Example | Description |
-|---------|-------------|
-| [RDP Connection Example](examples/rdp-connection-example.json) | Example connection profile for a corporate development server |
-| [RDP Session Example](examples/rdp-session-example.json) | Example active session record from an RDS host |
+- [Rdp Context](https://apis.io/jsonld/rdp/rdp-context/)
 
-## Vocabulary
+#### Vocabulary (1)
 
-| Vocabulary | Description |
-|------------|-------------|
-| [RDP Vocabulary](vocabulary/rdp-vocabulary.yml) | Domain vocabulary for RDP protocol concepts and Refinitiv Data Platform terms |
+The provider's domain terms, defined.
 
-## Specifications & References
+- [RDP Vocabulary](https://apis.io/vocabularies/rdp/rdp-vocabulary/)
 
-- [MS-RDPBCGR (Microsoft Open Specification)](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpbcgr/)
-- [MS-RDSOD Remote Desktop Services Overview](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdsod/)
-- [Microsoft Remote Desktop Services Docs](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/welcome-to-rds)
-- [LSEG Refinitiv Data Platform APIs](https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis)
+#### Examples (2)
 
-## Timestamps
+Example requests and responses.
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-05-02
+- [Rdp Connection Example](https://apis.io/examples/rdp/rdp-connection-example/)
+- [Rdp Session Example](https://apis.io/examples/rdp/rdp-session-example/)
 
-## Maintainers
+#### Governance rules (1)
 
-**FN:** Kin Lane  
-**Email:** kin@apievangelist.com
+Spectral rulesets for the provider's contracts.
+
+- [RDP — jsonschema rules](https://apis.io/rules/rdp/rdp-jsonschema-spectral-rules/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Documentation](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/welcome-to-rds)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for RDP: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/rdp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
